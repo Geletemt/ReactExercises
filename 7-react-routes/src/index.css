@@ -1,0 +1,25 @@
+html,body{
+    height:100%;
+    padding: 0;
+    margin:0;
+}
+.sidebar{
+    position:absolute;
+    top:0;
+    bottom:0;
+    background:rgb(159, 209, 225);
+    width: 170px;
+    padding:10px;
+}
+ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+li{
+    margin:10px 0px;
+}
+.content{
+    margin-left: 210px;
+    margin-top: 20px;
+}
