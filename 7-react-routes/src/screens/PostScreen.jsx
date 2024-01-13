@@ -6,6 +6,11 @@ export default function PostScreen() {
   const { postId } = useParams();
   const navigate = useNavigate();
 
+  //on mount ->[]
+  //on dismount ->[] & return function
+  // on dependency change ->[algo]
+    
+  
   useEffect(() => {
     if (!postList[postId]) {
       navigate('/404');

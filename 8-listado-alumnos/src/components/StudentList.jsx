@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import _ from 'lodash';
+import StudentFilter from './StudentFilter';
 
 export default function StudentList() {
   const [students, setStudents] = useState();
@@ -19,7 +20,7 @@ export default function StudentList() {
 
   return (
     <>
-      
+      <StudentFilter/>
       <table className="table table-hover">
         <thead>
           <tr>

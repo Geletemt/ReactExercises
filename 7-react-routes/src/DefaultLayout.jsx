@@ -10,11 +10,9 @@ export default function DefaultLayout() {
             <Link to="/"> Home</Link>
           </li>
           <li>
-            <Link to="/new-post"> Otra cosa</Link>
+            <Link to="/new-post"> Nuevo post</Link>
           </li>
-          <li>
-            <Link to="/una-mas"> Una mas</Link>
-          </li>
+         
           {postList.map((post, i) => (
             <li key={i}>
               <Link to={`/post/${i}/`}>{post.name}</Link>

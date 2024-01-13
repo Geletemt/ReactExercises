@@ -1,20 +1,28 @@
-import { Field, Formik } from 'formik';
-
+import { Field, Form, Formik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 
 export default function NewPostScreen() {
+  const navigate = useNavigate();
+
+  const handleNewPost =(values) =>{
+    console.log('Resultado del formulario:',values);
+    navigate('/');
+  }
+
   return (
     <Formik
       initialValues={{
         name: '',
         content: '',
       }}
+      onSubmit={(values) =>handleNewPost(values)}
     >
-      onSubmit={(values) => console.log(values)}
       {() => (
-        <form>
+        <Form>
           <Field name="name" />
           <Field as="textarea" name="content" />
-        </form>
+          <button type='submit'>Enviar</button>
+        </Form>
       )}
     </Formik>
   );
